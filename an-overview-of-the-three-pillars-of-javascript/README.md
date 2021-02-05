@@ -1,7 +1,7 @@
 # An Overview of the Three Pillars of JavaScript - Kyle Simpson
 
 ### Table of Contents
-- [An Overview of the Three Pillars of JavaScript - Kyle Simpson]
+<!-- no toc -->
 - [Types and Coercion](#types-and-coercion)
   - [Primitive Types](#primitive-types)
   - [NaN](#nan)
