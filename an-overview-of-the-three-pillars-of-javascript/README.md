@@ -46,7 +46,7 @@ typeof v; // "boolean"
 // .. AND SO ON
 ```
 
-- It is wildly known that an declared variable with no value assigned to them will always return `undefined`. But the same is true if the variable itself was never declared in the first place.
+- It is wildly known that a declared variable with no value assigned to them will always return `undefined`. But the same is true if the variable itself was never declared in the first place.
 
 ---
 
@@ -64,14 +64,14 @@ var v = function() {}
 typeof v // "function" hmmm?
 ```
 
-It might be surprising that we have function as a JavaScript return value, even tough it is only a subtype of the type `object`. It is actually very useful, as we need to know if we have a value that can be called as a function.
+It might be surprising that we have function as a JavaScript return value, even though it is only a subtype of the type `object`. It is actually very useful, as we need to know if we have a value that can be called as a function.
 
 ```jsx
 var v = [1, 2, 3]
 typeof v // "object" hmmm?
 ```
 
-This is clearly an array, but typeof shows us an object. The reason is... who the fuck knows? There are other operations that are able to further distinguish subtypes like this that will be covered in the future.
+This is clearly an array, but `typeof` shows us an object. The reason is... who the fuck knows? There are other operations that are able to further distinguish subtypes like this that will be covered in the future.
 
 ## NaN
 
@@ -82,11 +82,11 @@ var greetings = 'Hello World'
 var somethingElse = greeting / 2 // ????
 ```
 
-JavaScript will be like "hey buddy, what the fuck is this?", and you're get an special kind of value: `Nan`. 
+JavaScript will be like "*hey buddy, what the fuck is this?*", and you get a special kind of value: `Nan`. 
 
-People thing that NaN stands for "Not a Number", but that is not the case. If you take the string `'Hello World'` and test it against `Number.isNan()` you would get `false` as a result.
+People think that NaN stands for "Not a Number", but that is not the case. If you take the string `'Hello World'` and test it against `Number.isNan()` you would get `false` as a result.
 
-`Nan` stands for an invalid numeric operation. At first there will seem to be no difference, but put your brain to work a little bit and you will clearly see it.
+`Nan` stands for an invalid numeric operation. At first, there will seem to be no difference, but put your brain to work a little bit and you will see it.
 
 ## new
 
@@ -136,15 +136,15 @@ When we're getting a value from a input element for example, the value will alwa
 
 ## Booleans
 
-The concept of booleans are already known. But there are also **truthy** and **falsy** values.
+The concept of booleans is already known. But there are also **truthy** and **falsy** values.
 
-It means: 'Which values, if we tried to convert them to a boolean, would become false, and which ones would become true?"
+It means: *"Which values, if we tried to convert them to a boolean, would become false, and which ones would become true?"*
 
 **Falsy**: "", 0 and -0, null, Nan, false, undefined.
 
 **Truthy**: Everything else bud, objects, arrays and functions included.
 
-The most common case of others things getting converted to a boolean are the test clauses from if statements.
+The most common case of other things getting converted to a boolean are the test clauses from if statements.
 
 ## Coercion Best Practices
 
@@ -182,15 +182,15 @@ This question puts the onus on you, to be the one responsible for the critical d
 
 # Scope / Closures
 
-Scope means: where too look for thing in JavaScript. MDN defines it as: "the context in which vallues and expressions are *visible* and can be referenced.
+Scope means: where to look for a thing in JavaScript. MDN defines it as: "the context in which values and expressions are *visible* and can be referenced.
 
 A function serves as closure in JavaScript, and thus creates a scope. For example, a variable defined inside of a function cannot be accessed outside of it.
 
 ## Undefined / Undeclared
 
-A variable that is undefined was declared somewhere, but holds no value.
+A variable that is undefined was declared somewhere but holds no value.
 
-A varibale that is undeclared was never declared anywhere in the visible scope.
+A variable that is undeclared was never declared anywhere in the visible scope.
 
 ## Function Expression
 
@@ -216,7 +216,7 @@ Reference Material: [https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/scop
 
 A function's `this` keyword references the execution context for that call, determined entirely by how the function was called. Its all about the call, not about the definition, or where the function is, or where it belongs to.
 
-A this aware function can thus have a different context each time it is called, which makes it more flexible and reusable.
+A `this` aware function can thus have a different context each time it is called, which makes it more flexible and reusable.
 
 ```jsx
 function ask(question) {
@@ -237,7 +237,7 @@ otherClass()
 
 Goes hand-in-hand with `this`.
 
-The above is an example of what an prototypal class code. This is less common these days, since the `class` keyword was added, but it is important to understand it as it unveils what the `class` keyword is actually doing under the wraps.
+The above is an example of a prototypal class code. This is less common these days since the `class` keyword was added, but it is important to understand it as it unveils what the `class` keyword is actually doing under the wraps.
 
 ```jsx
 function Workshop(teacher) {
@@ -260,4 +260,4 @@ reactJS.ask('Isnt "prototype" ugly?'
 
 If we wanted to make a "thing that was like a class" called `Workshop` that could be instantiated several times, it's possible to define a function called `Workshop` (notice that it is `this` aware), and that function is going to become what we call a **constructor**; it is going to act as if it is a constructor for instances of this so-called `Workshop` class.
 
-To add methods into the definition of our `Workshop` class, we add them to the prototype of the of the `Workshop` constructor.
+To add methods into the definition of our `Workshop` class, we add them to the prototype of the `Workshop` constructor.

@@ -1,6 +1,6 @@
 # FrontEnd Masters Notes
 
-This is a series of documents intended at documenting both annotations and coding exercises promoted by FrontEnd Master's classes that I've choosen to enroll. 
+This is a series of documents intended at documenting both annotations and coding exercises promoted by FrontEnd Master's classes that I've chosen to enroll. 
 
 Each directory represents a different class classified by their name and author. 
 
